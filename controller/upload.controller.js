@@ -4,7 +4,7 @@ const path = require("path");
 // Cấu hình multer: giữ nguyên tên ảnh gốc
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "uploads/"); // Thư mục lưu file
+    cb(null, "/var/www/uploads"); // Thư mục lưu file
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname); // Giữ nguyên tên file
